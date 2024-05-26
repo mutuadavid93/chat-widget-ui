@@ -6,12 +6,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
     <title>Chat Widget</title>
+
+    <!-- Styles -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <main class="flex gap-3">
       <!-- Sidebar -->
-      <aside class="h-svh w-96 bg-lime-300"></aside>
+      <aside class="h-svh w-96 bg-gray-50">
+        <!-- Tabs -->
+
+        <div class="mb-4 border-b border-gray-200">
+          <ul
+            class="-mb-px flex w-ful justify-between px-2 flex-wrap text-center text-sm font-medium bg-gray-300 py-1 space-x-1"
+            id="default-tab"
+            data-tabs-toggle="#default-tab-content"
+            role="tablist"
+          >
+            <li role="presentation">
+              <button
+                class="inline-block rounded-lg  p-2.5"
+                id="unread-tab"
+                data-tabs-target="#unread"
+                type="button"
+                role="tab"
+                aria-controls="unread"
+                aria-selected="false"
+              >
+                Unread
+              </button>
+            </li>
+            <li role="presentation">
+              <button
+                class="inline-block rounded-lg p-2.5 hover:border-gray-300 hover:text-gray-600 "
+                id="recent-tab"
+                data-tabs-target="#recent"
+                type="button"
+                role="tab"
+                aria-controls="recent"
+                aria-selected="false"
+              >
+                Recent
+              </button>
+            </li>
+            <li role="presentation">
+              <button
+                class="inline-block rounded-lg p-2.5 hover:border-gray-300 hover:text-gray-600 "
+                id="starred-tab"
+                data-tabs-target="#starred"
+                type="button"
+                role="tab"
+                aria-controls="starred"
+                aria-selected="false"
+              >
+                Starred
+              </button>
+            </li>
+            <li role="presentation">
+              <button
+                class="inline-block rounded-lg border-b-2 p-2.5 hover:border-gray-300 hover:text-gray-600 
+                bg-white px-6"
+                id="all-tab"
+                data-tabs-target="#all"
+                type="button"
+                role="tab"
+                aria-controls="all"
+                aria-selected="true"
+              >
+                All
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div id="default-tab-content">
+          <div
+            class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
+            id="unread"
+            role="tabpanel"
+            aria-labelledby="unread-tab"
+          >
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              This is some placeholder content the
+              <strong class="font-medium text-gray-800 dark:text-white"
+                >unread tab's associated content</strong
+              >. Clicking another tab will toggle the visibility of this one for
+              the next. The tab JavaScript swaps classes to control the content
+              visibility and styling.
+            </p>
+          </div>
+          <div
+            class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
+            id="recent"
+            role="tabpanel"
+            aria-labelledby="recent-tab"
+          >
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              This is some placeholder content the
+              <strong class="font-medium text-gray-800 dark:text-white"
+                >recent tab's associated content</strong
+              >. Clicking another tab will toggle the visibility of this one for
+              the next. The tab JavaScript swaps classes to control the content
+              visibility and styling.
+            </p>
+          </div>
+          <div
+            class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
+            id="starred"
+            role="tabpanel"
+            aria-labelledby="starred-tab"
+          >
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              This is some placeholder content the
+              <strong class="font-medium text-gray-800 dark:text-white"
+                >starred tab's associated content</strong
+              >. Clicking another tab will toggle the visibility of this one for
+              the next. The tab JavaScript swaps classes to control the content
+              visibility and styling.
+            </p>
+          </div>
+          <div
+            class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
+            id="all"
+            role="tabpanel"
+            aria-labelledby="all-tab"
+          >
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              This is some placeholder content the
+              <strong class="font-medium text-gray-800 dark:text-white"
+                >all tab's associated content</strong
+              >. Clicking another tab will toggle the visibility of this one for
+              the next. The tab JavaScript swaps classes to control the content
+              visibility and styling.
+            </p>
+          </div>
+        </div>
+      </aside>
 
       <section class="grid w-full grid-cols-12 gap-3">
         <!-- start chat-messages -->
@@ -34,6 +167,105 @@
             class="h-[calc(100%-186px)] overflow-y-scroll rounded-xl border-2 border-gray-300 bg-gray-50"
           >
             <!-- Chat messages -->
+            <div class="flex justify-start">
+              <div class="flex max-w-md items-start gap-4 p-3 text-white">
+                <div
+                  class="flex size-12 min-w-12 items-center justify-center rounded-full bg-gray-400 text-sm font-medium"
+                >
+                  <img
+                    src="https://yt3.ggpht.com/yti/ANjgQV8f4u2owdhMfiRrmlote9bSupzhwcVCdTZGoVogu6ZikHU=s88-c-k-c0x00ffffff-no-rj"
+                    class="rounded-full"
+                  />
+                </div>
+                <div class="rounded-2xl rounded-tl-none bg-gray-400 p-2">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Fugit atque, non, quidem sint aspernatur nostrum dolorum
+                  similique.
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-end">
+              <div
+                class="flex max-w-md flex-row-reverse items-start gap-4 p-3 text-white"
+              >
+                <div
+                  class="flex size-12 min-w-12 items-center justify-center rounded-full bg-purple-400 text-sm font-medium"
+                >
+                  <img src="images/jake-diblasi.jpg" class="rounded-full" />
+                </div>
+                <div class="rounded-2xl rounded-tr-none bg-purple-400 p-2">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Fugit atque, non, quidem sint aspernatur nostrum dolorum
+                  similique.
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-start">
+              <div class="flex max-w-md items-start gap-4 p-3 text-white">
+                <div
+                  class="flex size-12 min-w-12 items-center justify-center rounded-full bg-gray-400 text-sm font-medium"
+                >
+                  <img
+                    src="https://yt3.ggpht.com/yti/ANjgQV8f4u2owdhMfiRrmlote9bSupzhwcVCdTZGoVogu6ZikHU=s88-c-k-c0x00ffffff-no-rj"
+                    class="rounded-full"
+                  />
+                </div>
+                <div class="rounded-2xl rounded-tl-none bg-gray-400 p-2">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Fugit atque, non, quidem sint aspernatur nostrum dolorum
+                  similique.
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-end">
+              <div
+                class="flex max-w-md flex-row-reverse items-start gap-4 p-3 text-white"
+              >
+                <div
+                  class="flex size-12 min-w-12 items-center justify-center rounded-full bg-purple-400 text-sm font-medium"
+                >
+                  <img src="images/jake-diblasi.jpg" class="rounded-full" />
+                </div>
+                <div class="rounded-2xl rounded-tr-none bg-purple-400 p-2">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Fugit atque, non, quidem sint aspernatur nostrum dolorum
+                  similique.
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-end">
+              <div
+                class="flex max-w-md flex-row-reverse items-start gap-4 p-3 text-white"
+              >
+                <div
+                  class="flex size-12 min-w-12 items-center justify-center rounded-full bg-purple-400 text-sm font-medium"
+                >
+                  <img src="images/jake-diblasi.jpg" class="rounded-full" />
+                </div>
+                <div class="rounded-2xl rounded-tr-none bg-purple-400 p-2">
+                  About to move in
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-start">
+              <div class="flex max-w-md items-start gap-4 p-3 text-white">
+                <div
+                  class="flex size-12 min-w-12 items-center justify-center rounded-full bg-gray-400 text-sm font-medium"
+                >
+                  <img
+                    src="https://yt3.ggpht.com/yti/ANjgQV8f4u2owdhMfiRrmlote9bSupzhwcVCdTZGoVogu6ZikHU=s88-c-k-c0x00ffffff-no-rj"
+                    class="rounded-full"
+                  />
+                </div>
+                <div class="rounded-2xl rounded-tl-none bg-gray-400 p-2">
+                  Good stuff
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="space-y-2">
@@ -48,7 +280,7 @@
               <div
                 class="flex items-center space-x-2 *:rounded-full *:bg-gray-100 *:p-2"
               >
-                <button class="hover:bg-gray-300 rotate-45">
+                <button class="rotate-45 hover:bg-gray-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -79,10 +311,24 @@
                   </svg>
                 </button>
                 <button class="hover:bg-gray-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M17 3H3v18h18V7zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3s3 1.34 3 3s-1.34 3-3 3m3-10H5V5h10z"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M17 3H3v18h18V7zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3s3 1.34 3 3s-1.34 3-3 3m3-10H5V5h10z"
+                    />
+                  </svg>
                 </button>
               </div>
-              <button class="rounded-lg bg-gray-500 hover:bg-gray-400 text-white text-sm font-medium px-6 py-2.5">Send message</button>
+              <button
+                class="rounded-lg bg-gray-500 px-6 py-2.5 text-sm font-medium text-white hover:bg-gray-400"
+              >
+                Send message
+              </button>
             </div>
           </div>
         </div>
@@ -91,5 +337,7 @@
         <div class="col-span-4 bg-amber-300"></div>
       </section>
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   </body>
 </html>
