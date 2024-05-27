@@ -832,7 +832,7 @@
                 type="button"
                 class="flex w-full items-center justify-between gap-3 border-b border-gray-200 py-5 font-medium text-gray-500 rtl:text-right dark:text-gray-400"
                 data-accordion-target="#accordion-details-body"
-                aria-expanded="true"
+                aria-expanded="false"
                 aria-controls="accordion-details-body"
               >
                 <span>Details</span>
@@ -889,18 +889,15 @@
               </div>
             </div>
 
-            <h2 id="accordion-flush-heading-3">
+            <h2 id="accordion-status">
               <button
                 type="button"
                 class="flex w-full items-center justify-between gap-3 border-b border-gray-200 py-5 font-medium text-gray-500 rtl:text-right dark:text-gray-400"
-                data-accordion-target="#accordion-flush-body-3"
+                data-accordion-target="#accordion-status-body"
                 aria-expanded="false"
-                aria-controls="accordion-flush-body-3"
+                aria-controls="accordion-status-body"
               >
-                <span
-                  >What are the differences between Flowbite and Tailwind
-                  UI?</span
-                >
+                <span>Status</span>
                 <svg
                   data-accordion-icon
                   class="h-3 w-3 shrink-0 rotate-180"
@@ -920,55 +917,81 @@
               </button>
             </h2>
             <div
-              id="accordion-flush-body-3"
+              id="accordion-status-body"
               class="hidden"
-              aria-labelledby="accordion-flush-heading-3"
+              aria-labelledby="accordion-status"
             >
               <div class="border-b border-gray-200 py-5">
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
-                  The main difference is that the core components from Flowbite
-                  are open source under the MIT license, whereas Tailwind UI is
-                  a paid product. Another difference is that Flowbite relies on
-                  smaller and standalone components, whereas Tailwind UI offers
-                  sections of pages.
-                </p>
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
-                  However, we actually recommend using both Flowbite, Flowbite
-                  Pro, and even Tailwind UI as there is no technical reason
-                  stopping you from using the best of two worlds.
-                </p>
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
-                  Learn more about these technologies:
-                </p>
-                <ul class="list-disc ps-5 text-gray-500 dark:text-gray-400">
-                  <li>
-                    <a
-                      href="https://flowbite.com/pro/"
-                      class="text-blue-600 hover:underline dark:text-blue-500"
-                      >Flowbite Pro</a
+                <!-- Stepper -->
+
+                <ol class="flex w-full flex-col items-center">
+                  <li
+                    class="flex w-full flex-col items-center text-blue-600 after:inline-block after:h-8 after:w-1 after:border-4 after:border-b after:border-blue-100 after:content-['']"
+                  >
+                    <div
+                      class="flex flex-col items-center gap-2 text-center text-gray-600"
                     >
+                      <span
+                        class="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#22C55E] text-white"
+                      >
+                        1
+                      </span>
+                      <div class="text-sm">Add portfolio project</div>
+                    </div>
                   </li>
-                  <li>
-                    <a
-                      href="https://tailwindui.com/"
-                      rel="nofollow"
-                      class="text-blue-600 hover:underline dark:text-blue-500"
-                      >Tailwind UI</a
+                  <li
+                    class="flex w-full flex-col items-center text-blue-600 after:inline-block after:h-8 after:w-1 after:border-4 after:border-b after:border-blue-100 after:content-['']"
+                  >
+                    <div
+                      class="flex flex-col items-center gap-2 text-center text-gray-600"
                     >
+                      <span
+                        class="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#E5E7EB] text-gray-600"
+                      >
+                        2
+                      </span>
+                      <div class="text-sm">Select template</div>
+                    </div>
                   </li>
-                </ul>
+                  <li
+                    class="flex w-full flex-col items-center text-blue-600 after:inline-block after:h-8 after:w-1 after:border-4 after:border-b after:border-blue-100 after:content-['']"
+                  >
+                    <div
+                      class="flex flex-col items-center gap-2 text-center text-gray-600"
+                    >
+                      <span
+                        class="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#E5E7EB] text-gray-600"
+                      >
+                        3
+                      </span>
+                      <div class="text-sm">Add details</div>
+                    </div>
+                  </li>
+                  <li class="flex w-full flex-col items-center text-blue-600">
+                    <div
+                      class="flex flex-col items-center gap-2 text-center text-gray-600"
+                    >
+                      <span
+                        class="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#E5E7EB] text-gray-600"
+                      >
+                        4
+                      </span>
+                      <div class="text-sm">Preview</div>
+                    </div>
+                  </li>
+                </ol>
               </div>
             </div>
 
-            <h2 id="accordion-flush-heading-2">
+            <h2 id="accordion-tasks-heading">
               <button
                 type="button"
                 class="flex w-full items-center justify-between gap-3 border-b border-gray-200 py-5 font-medium text-gray-500 rtl:text-right dark:text-gray-400"
-                data-accordion-target="#accordion-flush-body-2"
+                data-accordion-target="#accordion-tasks-body"
                 aria-expanded="false"
-                aria-controls="accordion-flush-body-2"
+                aria-controls="accordion-tasks-body"
               >
-                <span>Is there a Figma file available?</span>
+                <span>Tasks</span>
                 <svg
                   data-accordion-icon
                   class="h-3 w-3 shrink-0 rotate-180"
@@ -988,26 +1011,62 @@
               </button>
             </h2>
             <div
-              id="accordion-flush-body-2"
+              id="accordion-tasks-body"
               class="hidden"
-              aria-labelledby="accordion-flush-heading-2"
+              aria-labelledby="accordion-tasks-heading"
             >
               <div class="border-b border-gray-200 py-5">
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
-                  Flowbite is first conceptualized and designed using the Figma
-                  software so everything you see in the library has a design
-                  equivalent in our Figma file.
-                </p>
-                <p class="text-gray-500 dark:text-gray-400">
-                  Check out the
-                  <a
-                    href="https://flowbite.com/figma/"
-                    class="text-blue-600 hover:underline dark:text-blue-500"
-                    >Figma design system</a
-                  >
-                  based on the utility classes from Tailwind CSS and components
-                  from Flowbite.
-                </p>
+                <div class="space-y-2">
+                  <h2>Categories<h2>
+                  <ul class="flex flex-wrap gap-2 *:font-medium *:rounded-md *:border *:border-gray-100 *:bg-gray-200 *:text-sm *:px-4 *:cursor-pointer *:py-2">
+                    <li class="hover:bg-gray-100 hover:border hover:border-gray-300">Inquiry</li>
+                    <li class="hover:bg-gray-100 hover:border hover:border-gray-300">Offer</li>
+                    <li class="hover:bg-gray-100 hover:border hover:border-gray-300">Appointment</li>
+                    <li class="hover:bg-gray-100 hover:border hover:border-gray-300">More</li>
+                    <li class="hover:bg-gray-100 hover:border hover:border-gray-300">Refunds</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Note accordion -->
+            <h2 id="accordion-note-heading">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between gap-3 border-b border-gray-200 py-5 font-medium text-gray-500 rtl:text-right dark:text-gray-400"
+                data-accordion-target="#accordion-note-body"
+                aria-expanded="true"
+                aria-controls="accordion-note-body"
+              >
+                <span>Note</span>
+                <svg
+                  data-accordion-icon
+                  class="h-3 w-3 shrink-0 rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5 5 1 1 5"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="accordion-note-body"
+              class="hidden"
+              aria-labelledby="accordion-note-heading"
+            >
+              <div class="border-b border-gray-200 py-5">
+                
+
+<textarea rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Type your note here"></textarea>
+
               </div>
             </div>
           </div>
