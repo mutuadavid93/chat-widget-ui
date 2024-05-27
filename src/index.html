@@ -679,7 +679,10 @@
         </div>
         <!-- end chat-messages -->
 
-        <div class="col-span-4 space-y-4 bg-gray-50 p-4">
+        <!-- NOTE: h-svh overflow-y-scroll ; adds the scroller but re-uses the default browser scroller instead of having two -->
+        <div
+          class="col-span-4 h-svh space-y-4 overflow-y-scroll bg-gray-50 p-4"
+        >
           <div class="flex items-center gap-4">
             <div
               class="flex size-12 min-w-12 items-center justify-center rounded-full bg-gray-400 text-sm font-medium"
@@ -857,32 +860,32 @@
               aria-labelledby="accordion-details-heading"
             >
               <div class="grid grid-cols-2 gap-2 border-b border-gray-200 py-5">
-                  <div>
-                    <div class="font-medium">Mailing street</div>
-                    <div class="text-sm font-light">17713 Burnham Ave</div>
-                  </div>
-                  <div>
-                    <div class="font-medium">Mailing city</div>
-                    <div class="text-sm font-light">Lansing</div>
-                  </div>
-                
-                  <div>
-                    <div class="font-medium">Mailing state</div>
-                    <div class="text-sm font-light">IL</div>
-                  </div>
-                  <div>
-                    <div class="font-medium">Mailing zip code</div>
-                    <div class="text-sm font-light">60438</div>
-                  </div>
-                
-                  <div>
-                    <div class="font-medium">Imported by</div>
-                    <div class="text-sm font-light">Bob Smith</div>
-                  </div>
-                  <div>
-                    <div class="font-medium">Uploaded</div>
-                    <div class="text-sm font-light">2021-09-01 12:00:00</div>
-                  </div>
+                <div>
+                  <div class="font-medium">Mailing street</div>
+                  <div class="text-sm font-light">17713 Burnham Ave</div>
+                </div>
+                <div>
+                  <div class="font-medium">Mailing city</div>
+                  <div class="text-sm font-light">Lansing</div>
+                </div>
+
+                <div>
+                  <div class="font-medium">Mailing state</div>
+                  <div class="text-sm font-light">IL</div>
+                </div>
+                <div>
+                  <div class="font-medium">Mailing zip code</div>
+                  <div class="text-sm font-light">60438</div>
+                </div>
+
+                <div>
+                  <div class="font-medium">Imported by</div>
+                  <div class="text-sm font-light">Bob Smith</div>
+                </div>
+                <div>
+                  <div class="font-medium">Uploaded</div>
+                  <div class="text-sm font-light">2021-09-01 12:00:00</div>
+                </div>
               </div>
             </div>
 
@@ -954,6 +957,57 @@
                     >
                   </li>
                 </ul>
+              </div>
+            </div>
+
+            <h2 id="accordion-flush-heading-2">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between gap-3 border-b border-gray-200 py-5 font-medium text-gray-500 rtl:text-right dark:text-gray-400"
+                data-accordion-target="#accordion-flush-body-2"
+                aria-expanded="false"
+                aria-controls="accordion-flush-body-2"
+              >
+                <span>Is there a Figma file available?</span>
+                <svg
+                  data-accordion-icon
+                  class="h-3 w-3 shrink-0 rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5 5 1 1 5"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="accordion-flush-body-2"
+              class="hidden"
+              aria-labelledby="accordion-flush-heading-2"
+            >
+              <div class="border-b border-gray-200 py-5">
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  Flowbite is first conceptualized and designed using the Figma
+                  software so everything you see in the library has a design
+                  equivalent in our Figma file.
+                </p>
+                <p class="text-gray-500 dark:text-gray-400">
+                  Check out the
+                  <a
+                    href="https://flowbite.com/figma/"
+                    class="text-blue-600 hover:underline dark:text-blue-500"
+                    >Figma design system</a
+                  >
+                  based on the utility classes from Tailwind CSS and components
+                  from Flowbite.
+                </p>
               </div>
             </div>
           </div>
