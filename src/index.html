@@ -723,6 +723,240 @@
               2020
             </div>
           </div>
+
+          <!-- Accordion -->
+
+          <div
+            id="accordion-flush"
+            data-accordion="collapse"
+            data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+            data-inactive-classes="text-gray-500 dark:text-gray-400"
+          >
+            <h2 id="accordion-phone">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between gap-3 border-b border-gray-200 py-5 font-medium text-gray-500 rtl:text-right dark:text-gray-400"
+                data-accordion-target="#phone-body"
+                aria-expanded="false"
+                aria-controls="phone-body"
+              >
+                <span>Phones</span>
+                <svg
+                  data-accordion-icon
+                  class="h-3 w-3 shrink-0 rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5 5 1 1 5"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="phone-body"
+              class="hidden"
+              aria-labelledby="accordion-phone"
+            >
+              <div class="border-b border-gray-200 py-5">
+                <ul
+                  class="grid grid-cols-2 gap-2 *:cursor-pointer *:rounded-full *:bg-purple-400 *:p-1.5 *:px-6 *:text-xs *:text-white"
+                >
+                  <li>+25470457890</li>
+                  <li>+25470457890</li>
+                  <li>+25470457890</li>
+                  <li>+25470457890</li>
+                </ul>
+              </div>
+            </div>
+
+            <h2 id="accordion-tags-heading">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between gap-3 border-b border-gray-200 py-5 font-medium text-gray-500 rtl:text-right dark:text-gray-400"
+                data-accordion-target="#tags-body"
+                aria-expanded="false"
+                aria-controls="tags-body"
+              >
+                <span>Tags</span>
+                <svg
+                  data-accordion-icon
+                  class="h-3 w-3 shrink-0 rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5 5 1 1 5"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="tags-body"
+              class="hidden"
+              aria-labelledby="accordion-tags-heading"
+            >
+              <div
+                class="flex items-center space-x-4 border-b border-gray-200 py-5"
+              >
+                <input
+                  type="text"
+                  class="w-full rounded-lg py-1.5 ps-3.5 text-sm placeholder:text-sm"
+                  placeholder="Enter a tag"
+                />
+                <button
+                  class="w-36 rounded-lg bg-gray-500 px-6 py-2 text-sm font-medium text-white hover:bg-gray-400"
+                >
+                  Add Tag
+                </button>
+              </div>
+            </div>
+
+            <h2 id="accordion-details-heading">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between gap-3 border-b border-gray-200 py-5 font-medium text-gray-500 rtl:text-right dark:text-gray-400"
+                data-accordion-target="#accordion-details-body"
+                aria-expanded="true"
+                aria-controls="accordion-details-body"
+              >
+                <span>Details</span>
+                <svg
+                  data-accordion-icon
+                  class="h-3 w-3 shrink-0 rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5 5 1 1 5"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="accordion-details-body"
+              class="hidden"
+              aria-labelledby="accordion-details-heading"
+            >
+              <div class="grid grid-cols-2 gap-2 border-b border-gray-200 py-5">
+                  <div>
+                    <div class="font-medium">Mailing street</div>
+                    <div class="text-sm font-light">17713 Burnham Ave</div>
+                  </div>
+                  <div>
+                    <div class="font-medium">Mailing city</div>
+                    <div class="text-sm font-light">Lansing</div>
+                  </div>
+                
+                  <div>
+                    <div class="font-medium">Mailing state</div>
+                    <div class="text-sm font-light">IL</div>
+                  </div>
+                  <div>
+                    <div class="font-medium">Mailing zip code</div>
+                    <div class="text-sm font-light">60438</div>
+                  </div>
+                
+                  <div>
+                    <div class="font-medium">Imported by</div>
+                    <div class="text-sm font-light">Bob Smith</div>
+                  </div>
+                  <div>
+                    <div class="font-medium">Uploaded</div>
+                    <div class="text-sm font-light">2021-09-01 12:00:00</div>
+                  </div>
+              </div>
+            </div>
+
+            <h2 id="accordion-flush-heading-3">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between gap-3 border-b border-gray-200 py-5 font-medium text-gray-500 rtl:text-right dark:text-gray-400"
+                data-accordion-target="#accordion-flush-body-3"
+                aria-expanded="false"
+                aria-controls="accordion-flush-body-3"
+              >
+                <span
+                  >What are the differences between Flowbite and Tailwind
+                  UI?</span
+                >
+                <svg
+                  data-accordion-icon
+                  class="h-3 w-3 shrink-0 rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5 5 1 1 5"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="accordion-flush-body-3"
+              class="hidden"
+              aria-labelledby="accordion-flush-heading-3"
+            >
+              <div class="border-b border-gray-200 py-5">
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  The main difference is that the core components from Flowbite
+                  are open source under the MIT license, whereas Tailwind UI is
+                  a paid product. Another difference is that Flowbite relies on
+                  smaller and standalone components, whereas Tailwind UI offers
+                  sections of pages.
+                </p>
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  However, we actually recommend using both Flowbite, Flowbite
+                  Pro, and even Tailwind UI as there is no technical reason
+                  stopping you from using the best of two worlds.
+                </p>
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  Learn more about these technologies:
+                </p>
+                <ul class="list-disc ps-5 text-gray-500 dark:text-gray-400">
+                  <li>
+                    <a
+                      href="https://flowbite.com/pro/"
+                      class="text-blue-600 hover:underline dark:text-blue-500"
+                      >Flowbite Pro</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://tailwindui.com/"
+                      rel="nofollow"
+                      class="text-blue-600 hover:underline dark:text-blue-500"
+                      >Tailwind UI</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
