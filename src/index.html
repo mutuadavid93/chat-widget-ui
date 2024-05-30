@@ -773,14 +773,17 @@
               aria-labelledby="accordion-phone"
             >
               <div class="border-b border-gray-200 py-5">
-                <ul
-                  class="grid grid-cols-2 gap-2 *:cursor-pointer *:rounded-full *:bg-[#3B82F6] *:p-1.5 *:px-6 *:text-xs *:text-white"
-                >
-                  <li>+25470457890</li>
-                  <li>+25470457890</li>
-                  <li>+25470457890</li>
-                  <li>+25470457890</li>
-                </ul>
+
+                <form class="max-w-sm mx-auto">
+                  <label for="phone-numbers" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+                  <select id="phone-numbers" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option selected>Choose phone number</option>
+                    <option value="+25470457890">+25470457890</option>
+                    <option value="+25470457890">+25470457890</option>
+                    <option value="+25470457890">+25470457890</option>
+                    <option value="+25470457890">+25470457890</option>
+                  </select>
+                </form>
               </div>
             </div>
 
