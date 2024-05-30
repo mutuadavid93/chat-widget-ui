@@ -661,7 +661,7 @@
                     />
                   </svg>
                 </button>
-                <button class="hover:bg-gray-300">
+                <button id="save-message" class="hover:bg-gray-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -676,7 +676,7 @@
                 </button>
               </div>
               <button
-                class="rounded-lg bg-gray-500 px-6 py-2.5 text-sm font-medium text-white hover:bg-gray-400"
+                class="btn-primary"
               >
                 Send message
               </button>
@@ -825,7 +825,7 @@
                   placeholder="Enter a tag"
                 />
                 <button
-                  class="w-36 rounded-lg bg-gray-500 px-6 py-2 text-sm font-medium text-white hover:bg-gray-400"
+                  class="w-36 btn-primary"
                 >
                   Add Tag
                 </button>
@@ -1081,11 +1081,58 @@ focus:ring-blue-500 focus:border-blue-500" placeholder="Type your note here"></t
       </section>
     </main>
 
-    <!-- Modal Window -->
-    <section class="fixed z-50 inset-0 w-full h-screen bg-black/70">
-      
+    <!-- start modal-window -->
+    <section id="save-message-modal" class="fixed z-50 inset-0 w-full h-screen bg-black/70 hidden">
+      <div class="grid place-items-center h-screen">
+        
+        <!-- The actual modal -->
+        <div class="w-full max-w-4xl rounded-xl bg-white border p-4 pt-0 shadow-sm">
+         <div class="border-b border-gray-300 flex justify-end items-center py-2">
+          <button id="save-message-close-btn" class="cursor-pointer p-1.5 bg-gray-200 rounded-full hover:bg-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/></svg>
+          </button>
+         </div>
+
+         <div class="mt-4 space-y-4 *:text-sm *:font-medium text-gray-900">
+           <div class="form-field space-y-2">
+             <label for="title" class="font-medium">Title</label>
+             <input id="title" type="text" class="w-full py-1.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-0" placeholder="Enter title" />
+            </div>
+            <div class="form-field space-y-2">
+              <label for="message" class="block">Your message</label>
+              <textarea id="message" rows="4" class="block p-2.5 w-full text-sm bg-gray-50 rounded-lg border border-gray-300 focus:ring-0" placeholder="Write your thoughts here..."></textarea>
+            </div>
+            <div class="form-field">
+              <button class="btn-primary">
+                Submit
+              </button>
+            </div>
+         </div>
+        </div>
+      </div>
     </section>
+    <!-- end modal-window -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        const $saveMessageBtn = document.querySelector("#save-message");
+        const $saveMessagModal = document.querySelector("#save-message-modal");
+        const $saveMessageCloseBtn = document.querySelector("#save-message-close-btn");
+        const isHidden = $saveMessagModal.classList.contains('hidden');
+
+        $saveMessageBtn.addEventListener('click', ($event) => {
+          // check whether a hidden class exists
+          if (isHidden) {
+            $saveMessagModal.classList.remove("hidden");
+          }
+        });
+
+        $saveMessageCloseBtn.addEventListener('click', () => {
+          $saveMessagModal.classList.add("hidden");
+        });
+      });
+    </script>
   </body>
 </html>
