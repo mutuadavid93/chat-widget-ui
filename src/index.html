@@ -91,7 +91,7 @@
           />
         </div>
 
-        <div id="message-tab-content">
+        <div id="message-tab-content" class="h-[calc(100%-85px)] overflow-auto">
           <div
             class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
             id="unread"
@@ -240,9 +240,9 @@
               </div>
             </div>
 
-            <!-- Chat categories- h-[calc(100%-186px)]-->
+            <!-- Chat categories -->
             <div
-              class="h-[443px] divide-y divide-gray-200 overflow-y-scroll"
+              class="divide-y divide-gray-200"
               id="all-message-categories"
             >
               <div
@@ -504,7 +504,7 @@
           </div>
 
           <div
-            class="h-[calc(100%-186px)] overflow-y-scroll rounded-xl border-2 border-gray-300 bg-gray-50"
+            class="h-[calc(100%-162px)] overflow-auto rounded-xl border-2 border-gray-300 bg-gray-50"
           >
             <!-- Chat messages -->
             <div class="flex justify-start">
@@ -685,9 +685,8 @@
         </div>
         <!-- end chat-messages -->
 
-        <!-- NOTE: h-svh overflow-y-scroll ; adds the scroller but re-uses the default browser scroller instead of having two -->
         <div
-          class="col-span-4 h-svh space-y-4 overflow-y-scroll bg-gray-50 p-4"
+          class="col-span-4 h-svh space-y-4 overflow-auto bg-gray-50 p-4"
         >
           <div class="flex items-center gap-4">
             <div
@@ -1041,7 +1040,7 @@
                 type="button"
                 class="flex w-full items-center justify-between gap-3 border-b border-gray-200 py-5 font-medium text-gray-500 rtl:text-right dark:text-gray-400"
                 data-accordion-target="#accordion-note-body"
-                aria-expanded="true"
+                aria-expanded="false"
                 aria-controls="accordion-note-body"
               >
                 <span>Note</span>
