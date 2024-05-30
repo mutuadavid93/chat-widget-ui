@@ -13,6 +13,10 @@ export default {
         18: "4.5rem",
       },
       colors: {
+        "blue-message": "#508EF7",
+        "gray-message": "#F1F5F9",
+        "date-time": "#7E8591",
+        "chat-message": "#020817",
         "transparent-white": "rgba(255, 255, 255, 0.87)",
       },
     },
