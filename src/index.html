@@ -17,7 +17,10 @@
   <body>
     <main class="flex gap-3">
       <!-- Sidebar -->
-      <aside class="h-svh w-96 bg-gray-50">
+      <aside id="drawer-example" class="md:w-[26rem] md:bg-gray-50 md:relative md:p-0 h-svh fixed top-0 left-0 z-40 w-[calc(100%-70px)] p-4 pt-0 overflow-y-auto md:overflow-y-hidden transition-transform bg-white">
+        <div class="flex justify-end w-full py-2 md:hidden">
+          <button type="button" data-drawer-hide="drawer-example" class="text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/></svg></button>
+        </div>
         <!-- Tabs -->
 
         <div class="mb-4 border-b border-gray-200">
@@ -91,7 +94,7 @@
           />
         </div>
 
-        <div id="message-tab-content" class="h-[calc(100%-85px)] overflow-auto">
+        <div id="message-tab-content" class=" h-[calc(100%-85px)] md:overflow-hidden">
           <div
             class="hidden rounded-lg bg-gray-50 p-4 dark:bg-gray-800"
             id="unread"
@@ -242,11 +245,11 @@
 
             <!-- Chat categories -->
             <div
-              class="divide-y divide-gray-200"
+              class="divide-y divide-gray-200 *:cursor-pointer"
               id="all-message-categories"
             >
               <div
-                class="flex items-center gap-1 py-4 text-gray-600 hover:cursor-pointer hover:bg-[#3B82F6]"
+                class="flex items-center gap-1 py-4 text-gray-600 hover:cursor-pointer hover:bg-[#3B82F6] hover:text-white"
               >
                 <div class="flex items-center gap-2 text-sm font-medium">
                   <input
@@ -257,10 +260,7 @@
                   <div
                     class="flex size-10 min-w-10 items-center justify-center rounded-full bg-gray-400 text-sm font-medium"
                   >
-                    <img
-                      src="https://images.unsplash.com/photo-1563833717765-00462801314e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      class="rounded-full"
-                    />
+                    MS
                   </div>
                   <div>
                     Mat Stauffer
@@ -282,7 +282,7 @@
                 </div>
               </div>
               <div
-                class="flex items-center gap-1 py-4 text-gray-600 hover:cursor-pointer hover:bg-[#3B82F6]"
+                class="flex items-center gap-1 py-4 text-gray-600 hover:cursor-pointer hover:bg-[#3B82F6] hover:text-white"
               >
                 <div class="flex items-center gap-2 text-sm font-medium">
                   <input
@@ -293,10 +293,7 @@
                   <div
                     class="flex size-10 min-w-10 items-center justify-center rounded-full bg-gray-400 text-sm font-medium"
                   >
-                    <img
-                      src="https://images.unsplash.com/photo-1563833717765-00462801314e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      class="rounded-full"
-                    />
+                    MS
                   </div>
                   <div>
                     Mat Stauffer
@@ -318,7 +315,7 @@
                 </div>
               </div>
               <div
-                class="flex items-center gap-1 py-4 text-gray-600 hover:cursor-pointer hover:bg-[#3B82F6]"
+                class="flex items-center gap-1 py-4 text-gray-600 hover:cursor-pointer hover:bg-[#3B82F6] hover:text-white"
               >
                 <div class="flex items-center gap-2 text-sm font-medium">
                   <input
@@ -326,13 +323,10 @@
                     value=""
                     class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-gray-600 focus:ring-2 focus:ring-gray-500"
                   />
-                  <div
+                    <div
                     class="flex size-10 min-w-10 items-center justify-center rounded-full bg-gray-400 text-sm font-medium"
                   >
-                    <img
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      class="rounded-full"
-                    />
+                    CW
                   </div>
                   <div>
                     You
@@ -349,7 +343,7 @@
                 </div>
               </div>
               <div
-                class="flex items-center gap-1 py-4 text-gray-600 hover:cursor-pointer hover:bg-[#3B82F6]"
+                class="flex items-center gap-1 py-4 text-gray-600 hover:cursor-pointer hover:bg-[#3B82F6] hover:text-white"
               >
                 <div class="flex items-center gap-2 text-sm font-medium">
                   <input
@@ -377,7 +371,7 @@
                 </div>
               </div>
               <div
-                class="flex items-center gap-1 py-4 text-gray-600 hover:cursor-pointer hover:bg-[#3B82F6]"
+                class="flex items-center gap-1 py-4 text-gray-600 hover:cursor-pointer hover:bg-[#3B82F6] hover:text-white"
               >
                 <div class="flex items-center gap-2 text-sm font-medium">
                   <input
@@ -388,7 +382,7 @@
                   <div
                     class="flex size-10 min-w-10 items-center justify-center rounded-full bg-gray-400 text-sm font-medium"
                   >
-                    <img src="images/jake-diblasi.jpg" class="rounded-full" />
+                    MG
                   </div>
                   <div>
                     Michael Grealish
@@ -410,7 +404,7 @@
                 </div>
               </div>
               <div
-                class="flex items-center gap-1 py-4 text-gray-600 hover:cursor-pointer hover:bg-[#3B82F6]"
+                class="flex items-center gap-1 py-4 text-gray-600 hover:cursor-pointer hover:bg-[#3B82F6] hover:text-white"
               >
                 <div class="flex items-center gap-2 text-sm font-medium">
                   <input
@@ -443,7 +437,7 @@
                 </div>
               </div>
               <div
-                class="flex items-center gap-1 py-4 text-gray-600 hover:cursor-pointer hover:bg-[#3B82F6]"
+                class="flex items-center gap-1 py-4 text-gray-600 hover:cursor-pointer hover:bg-[#3B82F6] hover:text-white"
               >
                 <div class="flex items-center gap-2 text-sm font-medium">
                   <input
@@ -451,13 +445,10 @@
                     value=""
                     class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-gray-600 focus:ring-2 focus:ring-gray-500"
                   />
-                  <div
+                    <div
                     class="flex size-10 min-w-10 items-center justify-center rounded-full bg-gray-400 text-sm font-medium"
                   >
-                    <img
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      class="rounded-full"
-                    />
+                    CW
                   </div>
                   <div>
                     You
@@ -483,60 +474,60 @@
         </div>
       </aside>
 
-      <section class="grid w-full grid-cols-12 gap-3">
+      <section class="grid w-full md:grid-cols-12 gap-3">
         <!-- start chat-messages -->
-        <div id="chat-messages" class="col-span-8 h-svh space-y-2">
-          <!-- <div class="-ml-1 text-black cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"/></svg>
-          </div> -->
-          <div class="-ml-1 text-gray-500 cursor-pointer">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="m22 9.24l-7.19-.62L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27L18.18 21l-1.63-7.03zM12 15.4l-3.76 2.27l1-4.28l-3.32-2.88l4.38-.38L12 6.1l1.71 4.04l4.38.38l-3.32 2.88l1 4.28z"
-              />
-            </svg>
+        <div id="chat-messages" class="md:col-span-8 md:h-svh space-y-2 p-4 md:p-0">
+          <div class="flex items-center justify-between w-full">
+            <!-- <div class="-ml-1 text-black cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div> -->
+            <div class="-ml-1 text-gray-500 cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="m22 9.24l-7.19-.62L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27L18.18 21l-1.63-7.03zM12 15.4l-3.76 2.27l1-4.28l-3.32-2.88l4.38-.38L12 6.1l1.71 4.04l4.38.38l-3.32 2.88l1 4.28z"
+                />
+              </svg>
+            </div>
+
+            <button id="menu-collapse" type="button" class="md:hidden" type="button" data-drawer-target="drawer-example" data-drawer-show="drawer-example" aria-controls="drawer-example">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"/></svg>
+            </button>
           </div>
 
           <div
-            class="h-[calc(100%-162px)] overflow-auto rounded-xl border-2 border-gray-300"
+            class="md:h-[calc(100%-162px)] md:overflow-auto rounded-xl border-2 border-gray-300"
           >
             <!-- Chat messages -->
             <div class="flex justify-start">
               <div class="flex max-w-md items-start gap-4 p-3 text-white">
                 <div
-                  class="flex size-12 min-w-12 items-center justify-center rounded-full bg-gray-message text-sm font-medium"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    class="rounded-full"
-                  />
-                </div>
+                    class="flex size-10 min-w-10 items-center justify-center rounded-full bg-gray-400 text-sm font-medium"
+                  >
+                    CW
+                  </div>
                 <div class="rounded-2xl rounded-tl-none bg-blue-message p-2">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Fugit atque, non.
-                  <div class="block text-xs font-medium text-date-time mt-2">2024-05-16 08:30 AM</div>
+                  <div class="block text-xs font-medium text-gray-200 mt-2">2024-05-16 08:30 AM</div>
                 </div>
               </div>
             </div>
 
             <div class="flex justify-end">
               <div
-                class="flex max-w-md flex-row-reverse items-start gap-4 p-3 text-white"
+                class="flex max-w-md flex-row-reverse items-start gap-4 p-3 text-black"
               >
                 <div
-                  class="flex size-12 min-w-12 items-center justify-center rounded-full bg-gray-message text-sm font-medium"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1563833717765-00462801314e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    class="rounded-full"
-                  />
-                </div>
+                    class="flex size-10 min-w-10 items-center justify-center rounded-full bg-gray-400 text-sm font-medium"
+                  >
+                    MS
+                  </div>
                 <div class="rounded-2xl rounded-tr-none bg-gray-message p-2">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Fugit atque, non.
@@ -548,33 +539,27 @@
             <div class="flex justify-start">
               <div class="flex max-w-md items-start gap-4 p-3 text-white">
                 <div
-                  class="flex size-12 min-w-12 items-center justify-center rounded-full bg-gray-message text-sm font-medium"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    class="rounded-full"
-                  />
-                </div>
-                <div class="rounded-2xl rounded-tl-none bg-gray-message p-2">
+                    class="flex size-10 min-w-10 items-center justify-center rounded-full bg-gray-400 text-sm font-medium"
+                  >
+                    CW
+                  </div>
+                <div class="rounded-2xl rounded-tl-none bg-blue-message p-2">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Fugit atque, non.
-                  <div class="block text-xs font-medium text-date-time mt-2">2024-05-16 08:30 AM</div>
+                  <div class="block text-xs font-medium text-gray-200 mt-2">2024-05-16 08:30 AM</div>
                 </div>
               </div>
             </div>
 
             <div class="flex justify-end">
               <div
-                class="flex max-w-md flex-row-reverse items-start gap-4 p-3 text-white"
+                class="flex max-w-md flex-row-reverse items-start gap-4 p-3 text-black"
               >
                 <div
-                  class="flex size-12 min-w-12 items-center justify-center rounded-full bg-gray-message text-sm font-medium"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1563833717765-00462801314e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    class="rounded-full"
-                  />
-                </div>
+                    class="flex size-10 min-w-10 items-center justify-center rounded-full bg-gray-400 text-sm font-medium"
+                  >
+                    MS
+                  </div>
                 <div class="rounded-2xl rounded-tr-none bg-gray-message p-2">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Fugit atque, non.
@@ -585,16 +570,13 @@
 
             <div class="flex justify-end">
               <div
-                class="flex max-w-md flex-row-reverse items-start gap-4 p-3 text-white"
+                class="flex max-w-md flex-row-reverse items-start gap-4 p-3 text-black"
               >
                 <div
-                  class="flex size-12 min-w-12 items-center justify-center rounded-full bg-gray-message text-sm font-medium"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1563833717765-00462801314e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    class="rounded-full"
-                  />
-                </div>
+                    class="flex size-10 min-w-10 items-center justify-center rounded-full bg-gray-400 text-sm font-medium"
+                  >
+                    MS
+                  </div>
                 <div class="rounded-2xl rounded-tr-none bg-gray-message p-2">
                   About to move in
                   <div class="block text-xs font-medium text-date-time mt-2">2024-05-16 08:30 AM</div>
@@ -604,16 +586,13 @@
             <div class="flex justify-start">
               <div class="flex max-w-md items-start gap-4 p-3 text-white">
                 <div
-                  class="flex size-12 min-w-12 items-center justify-center rounded-full bg-gray-message text-sm font-medium"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    class="rounded-full"
-                  />
-                </div>
-                <div class="rounded-2xl rounded-tl-none bg-gray-message p-2">
+                    class="flex size-10 min-w-10 items-center justify-center rounded-full bg-gray-400 text-sm font-medium"
+                  >
+                    CW
+                  </div>
+                <div class="rounded-2xl rounded-tl-none bg-blue-message p-2">
                   Good stuff
-                  <div class="block text-xs font-medium text-date-time mt-2">2024-05-16 08:30 AM</div>
+                  <div class="block text-xs font-medium text-gray-200 mt-2">2024-05-16 08:30 AM</div>
                 </div>
               </div>
             </div>
@@ -621,10 +600,10 @@
 
           <div class="space-y-2">
             <textarea
+              id="chat-message-box"
               rows="3"
-              class="block w-full rounded-xl border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:outline-none focus:ring-1"
+              class="block w-full  border-2 border-blue-400 rounded-xl md:border md:border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:outline-none focus:ring-1"
               placeholder="Type your message here..."
-              autofocus
             ></textarea>
 
             <div class="flex w-full items-center justify-between">
@@ -686,17 +665,17 @@
         <!-- end chat-messages -->
 
         <div
-          class="col-span-4 h-svh space-y-4 overflow-auto bg-gray-50 p-4"
+          class="md:col-span-4 md:h-svh space-y-4 md:overflow-auto bg-gray-50 p-4"
         >
           <div class="flex items-center gap-4">
             <div
               class="flex size-12 min-w-12 items-center justify-center rounded-full bg-gray-400 text-sm font-medium"
             >
-              LK
+              CW
             </div>
             <div class="w-full">
-              <h2 class="font-medium">Lester Kautzer</h2>
-              <a href="#">lester.kautzer@rocket.africa</a>
+              <h2 class="font-medium">Ceaser Warner</h2>
+              <a href="#">ceaser.warner@rocket.africa</a>
             </div>
           </div>
           <p class="line-clamp-2">
@@ -1086,7 +1065,7 @@ focus:ring-blue-500 focus:border-blue-500" placeholder="Type your note here"></t
 
     <!-- start modal-window -->
     <section id="save-message-modal" class="fixed z-50 inset-0 w-full h-screen bg-black/70 hidden">
-      <div class="grid place-items-center h-screen">
+      <div class="grid place-items-center h-screen md:mx-0 mx-4">
         
         <!-- The actual modal -->
         <div class="w-full max-w-4xl rounded-xl bg-white border p-4 pt-0 shadow-sm">
@@ -1127,6 +1106,9 @@ focus:ring-blue-500 focus:border-blue-500" placeholder="Type your note here"></t
     </section>
     <!-- end modal-window -->
 
+    <!-- drawer component -->
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
     <script>
@@ -1134,7 +1116,6 @@ focus:ring-blue-500 focus:border-blue-500" placeholder="Type your note here"></t
         const $saveMessageBtn = document.querySelector("#save-message");
         const $saveMessagModal = document.querySelector("#save-message-modal");
         const $saveMessageCloseBtn = document.querySelector("#save-message-close-btn");
-        const $confirmTemplateChoice = document.querySelector("#confirm-template-choice-btn");
         const isHidden = $saveMessagModal.classList.contains('hidden');
 
         $saveMessageBtn.addEventListener('click', ($event) => {
@@ -1148,10 +1129,17 @@ focus:ring-blue-500 focus:border-blue-500" placeholder="Type your note here"></t
           $saveMessagModal.classList.add("hidden");
         });
 
-        $confirmTemplateChoice.addEventListener('click', () => {
-          // Here fetch the actual template content
-          alert("");
-        });
+        function handleResize() {
+          const drawer = document.getElementById('drawer-example');
+          if (window.innerWidth >= 768) {
+            drawer.classList.remove('-translate-x-full');
+          } else {
+            drawer.classList.add('-translate-x-full');
+          }
+        }
+        window.addEventListener('resize', handleResize);
+        // Initial call
+        handleResize();
       });
     </script>
   </body>
