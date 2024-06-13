@@ -14,7 +14,7 @@
 
 <body>
   <!-- start navbar -->
-  <header class="shadow-xl bg-white mb-6">
+  <header class="fixed z-40 w-full shadow-xl bg-white mb-6">
     <nav class="flex flex-col md:flex-row gap-2 md:gap-0 md:items-center container p-2 divide-y md:divide-none">
       <div class="left-section flex items-center">
         <button class="p-2 bg-blue-300 rounded-full text-white md:mr-12">
@@ -31,7 +31,13 @@
             </svg>
           </button> -->
           <a href="#" class="text-gray-900">Home</a>
-          <a href="#" class="text-gray-900">Contact</a>
+
+          <button id="menu-collapse" type="button" class="md:hidden" type="button" data-drawer-target="drawer-example"
+            data-drawer-show="drawer-example" aria-controls="drawer-example">
+            <svg class="text-gray-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z" />
+            </svg>
+          </button>
         </div>
       </div>
 
@@ -80,10 +86,10 @@
   <!-- end navbar -->
 
 
-  <main class="flex gap-3">
+  <main class="flex gap-3 w-full pt-[7rem] md:pt-[calc(3.5rem+20px)]">
     <!-- Sidebar -->
     <aside id="drawer-example"
-      class="md:w-[26rem] md:bg-gray-50 md:relative md:p-0 h-svh fixed top-0 left-0 z-40 w-[calc(100%-70px)] p-4 pt-0 overflow-y-auto md:overflow-y-hidden transition-transform bg-white">
+      class="md:w-[26rem] md:bg-gray-50 md:relative md:p-0 h-svh fixed top-0 left-0 z-50 w-[calc(100%-70px)] p-4 pt-0 overflow-y-auto md:overflow-y-hidden transition-transform bg-white">
       <div class="flex justify-end w-full py-2 md:hidden">
         <button type="button" data-drawer-hide="drawer-example" class="text-gray-400"><svg
             xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -128,6 +134,23 @@
       <div class="container px-2">
         <input type="search" placeholder="Search conversations"
           class="w-full text-sm placeholder:text-sm placeholder:font-medium" />
+      </div>
+
+      <div class="px-2 my-2 cursor-pointer relative">
+        <div class="flex items-center" id="action">
+          <input checked id="checked-checkbox" type="checkbox" value=""
+            class="w-4 h-4 text-gray-500 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 focus:ring-2">
+          <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+            Action</label>
+        </div>
+
+        <div
+        id="actionMenu"
+          class="absolute hidden flex flex-col *:pl-4 py-4 *:text-left max-w-[13rem] w-full top-7 rounded-xl shadow-sm bg-gray-50 border">
+          <button class="py-1 hover:text-gray-500">Mark as read</button>
+          <button class="py-1 hover:text-gray-500">Starred</button>
+          <button class="pt-2 hover:text-gray-500 border-t">Delete</button>
+        </div>
       </div>
 
       <div id="message-tab-content" class=" h-[calc(100%-85px)] md:overflow-hidden">
@@ -410,27 +433,16 @@
       <!-- start chat-messages -->
       <div id="chat-messages" class="md:col-span-8 md:h-svh space-y-2 p-4 md:p-0">
         <div class="flex items-center justify-between w-full">
-          <!-- <div class="-ml-1 text-black cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"/></svg>
-            </div> -->
           <div class="-ml-1 text-gray-500 cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
               <path fill="currentColor"
                 d="m22 9.24l-7.19-.62L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21L12 17.27L18.18 21l-1.63-7.03zM12 15.4l-3.76 2.27l1-4.28l-3.32-2.88l4.38-.38L12 6.1l1.71 4.04l4.38.38l-3.32 2.88l1 4.28z" />
             </svg>
           </div>
-
-          <button id="menu-collapse" type="button" class="md:hidden" type="button" data-drawer-target="drawer-example"
-            data-drawer-show="drawer-example" aria-controls="drawer-example">
-            <svg class="text-gray-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-              <path fill="currentColor" d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z" />
-            </svg>
-          </button>
         </div>
 
         <div class="md:h-[calc(100%-162px)] md:overflow-auto rounded-xl border-2 border-gray-300">
           <!-- Chat messages -->
-
 
           <!-- start audio card -->
           <div class="flex max-w-md items-start gap-4 p-3 text-white">
@@ -979,6 +991,30 @@ focus:ring-blue-500 focus:border-blue-500" placeholder="Type your note here"></t
       window.addEventListener('resize', handleResize);
       // Initial call
       handleResize();
+
+
+      const action = document.getElementById('action');
+      const actionMenu = document.getElementById('actionMenu');
+
+      action.addEventListener('mouseenter', function () {
+        actionMenu.classList.remove('hidden');
+      });
+
+      action.addEventListener('mouseleave', function () {
+        setTimeout(() => {
+          if (!actionMenu.matches(':hover')) {
+            actionMenu.classList.add('hidden');
+          }
+        }, 100);
+      });
+
+      actionMenu.addEventListener('mouseleave', function () {
+        actionMenu.classList.add('hidden');
+      });
+
+      actionMenu.addEventListener('mouseenter', function () {
+        actionMenu.classList.remove('hidden');
+      });
     });
   </script>
 </body>
